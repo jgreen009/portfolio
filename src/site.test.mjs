@@ -1,0 +1,7 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile,access} from 'node:fs/promises';
+import {projects,profile,testimonials} from './content.mjs';
+const routes=['','work','about','contact',...projects.map(p=>'work/'+p.slug)];
+test('all requested routes have metadata, a single main heading and valid internal links',async()=>{for(const route of routes){const html=await readFile(`dist/${route?route+'/':''}index.html`,'utf8');assert.equal((html.match(/<h1[ >]/g)||[]).length,1,route);assert.match(html,/<meta name="description" content="[^"]+"/);assert.match(html,/<main id="main">/);for(const [,href]of html.matchAll(/href="(\/[^"?#]*)(?:[?#][^"]*)?"/g)){await access('dist'+(href.endsWith('.svg')||href.endsWith('.css')?href:href==='/'?'/index.html':href+'/index.html'))}}});
+test('case studies preserve supplied capabilities and no invented contact or testimonial records',async()=>{assert.equal(profile.email,null);assert.deepEqual(testimonials,[]);for(const p of projects){const html=await readFile('dist/work/'+p.slug+'/index.html','utf8');for(const feature of p.features)assert.ok(html.includes(feature));assert.ok(html.includes('CONCEPT PREVIEW'))}const contact=await readFile('dist/contact/index.html','utf8');assert.ok(contact.includes('It does not send an enquiry.'));assert.ok(!contact.includes('mailto:'));const home=await readFile('dist/index.html','utf8');assert.ok(home.includes('EDITABLE PLACEHOLDER'))});
