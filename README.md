@@ -1,32 +1,36 @@
-# Michael portfolio — foundation
+# Michael portfolio — phase-one foundation
 
-This isolated project preserves the existing estimate-comparison app in the parent directory.
+The portfolio is isolated from the pre-existing estimate-comparison application. No parent application files were changed.
 
-Run `npm run build` to generate seven static routes. Run `npm start` for http://127.0.0.1:5180. Run `npm test` for route and content checks. No build dependencies are required.
+## Run and validate
 
-## Architecture and content
+- `npm install` installs the locked Next.js, React, TypeScript, Tailwind CSS and Motion dependencies.
+- `npm run dev` starts development on port 5181.
+- `npm run build` exports the production site into `out/`.
+- `npm start` previews the exported site on http://127.0.0.1:5180.
+- `npm run typecheck` validates TypeScript.
+- `npm test` checks exported routes, internal links, metadata, project content and contact details.
 
-`src/content.mjs` is the content source for profile, projects, capabilities, services, process, technology groups and testimonials. `src/build.mjs` contains shared layout and page renderers; `src/styles.css` owns responsive design tokens and components. `src/app.js` owns the mobile menu and local enquiry-brief download. Generated, tracked `dist/` assets are the static hosting output. Every route has its own HTML entrypoint and works without client-side routing; a dedicated 404 page covers unknown URLs.
+## Architecture
 
-Routes: `/`, `/work`, `/work/plp-estimate-unifier`, `/work/production-order-crm`, `/work/aurelis-estate`, `/about`, `/contact`.
+Next.js App Router with static export, TypeScript, Tailwind utilities and a custom token-based stylesheet. Server components render the content; client components are limited to navigation, the enquiry brief, and foundational Motion interactions. Routes are `/`, `/work`, `/work/plp-estimate-unifier`, `/work/production-order-crm`, `/work/aurelis-estate`, `/about`, and `/contact`. Unknown routes render a real 404. The resume configuration is disabled until verified material is supplied.
+
+`app/` owns routes and metadata. `components/portfolio.tsx` provides reusable project previews, case-study sections, labels, links, process, system visual, CTA, and footer. `components/interactive.tsx` contains navigation, motion, and the enquiry form. `lib/content.ts` is the typed content boundary with all extended project fields, social links, testimonials and resume configuration. `src/content.mjs` retains the supplied descriptions, capabilities, technologies, services and process text; edit these records without changing layouts. A CMS adapter can later return the same Project type.
+
+Case studies support title, category, status, year, industry/client, hero media, overview, problem, solution, responsibilities, features, technologies, architecture/workflow, design process, challenges, outcomes, gallery, live URL and next-project navigation. Missing facts are labeled editable placeholders; typed media includes alt text and dimensions. No client, date, metric, quote or employment history has been invented.
 
 ## Design system
 
-Charcoal #171819, warm white #f1efe9, muted gray #a4a6aa, blue action #5268ef, pale blue accent #8c99ff. Space Grotesk display, DM Sans body, system monospace metadata. Google Fonts serves the two open-source fonts with display=swap and fallback fonts. Large typography, fine borders, generous space and restrained orbital system geometry define the identity. Project visuals are concept UI previews, not evidence of actual product screens. Motion is intentionally minimal; reduced motion is respected.
+Charcoal #171819, warm white #f1efe9, gray #a4a6aa, blue action #5268ef and accent #8c99ff. Space Grotesk for display, DM Sans for body, system monospace for metadata. Google Fonts uses display=swap and local fallbacks. Editorial typography, generous spacing, fine borders, restrained system geometry and large concept previews establish the identity. Project artwork is explicitly conceptual, not actual application screenshots. Approved hero media and galleries replace previews through the data layer.
 
-## Content integrity and launch requirements
+## Contact and placeholders
 
-- The supplied brief ends at `Email: mik`. `profile.email` remains null. The contact form downloads a local text brief and never claims to send it. Confirm the full email and add a server-backed delivery provider with validation, abuse controls and privacy copy before enabling enquiry sending.
-- Testimonials are an empty centralized array. The visible section is explicitly marked as an editable placeholder; no quotes, people, ratings, or companies were fabricated. Replace the placeholder only with approved testimonials.
-- No dates, clients, performance metrics, financial results, résumé history, or unprovided live links were invented.
-- Only Aurelis has a supplied live URL. Its live content could not be verified during this build. Replace the typographic concept with owner-approved real site imagery when available.
-- `/resume` is reserved but deliberately not generated or linked. Add it only after verified résumé content is supplied; do not publish an empty résumé page.
-- Future case-study depth should be grounded in actual implementation artifacts. Add screenshots, project role, dates, and quantitative evidence only after verification.
+Verified contact: kyade345@gmail.com and +234 902 398 3129. Email and telephone links work directly. The enquiry form downloads a local text brief, then offers to open it in the visitor's email app. It does not store or automatically send personal information; its status does not claim delivery. A server-backed submission flow can be added later if desired.
 
-## Next-phase interaction architecture
+LinkedIn, GitHub, Fiverr and Contra are non-clickable Coming soon placeholders until URLs are provided. Testimonials are empty data with an explicitly editable section. Only Aurelis has a supplied live URL; its live content could not be independently retrieved during the initial build.
 
-Keep content independent of presentation. Use progressive enhancement for section reveals, project transitions, and the system diagram. Prefer transform/opacity, honor reduced motion, preserve keyboard focus, and keep links usable without JavaScript. Avoid adopting an animation runtime until a concrete interaction requires it. If migrating to React/Next.js, preserve route URLs, tokens and centralized content. Current architecture has no backend, database or secrets.
+## Accessibility and next phase
 
-## Verification
+Semantic landmarks, native labeled controls, skip navigation, keyboard focus, Escape-to-close mobile navigation, restrained motion and reduced-motion support are included. Native links preserve browser history and anchors. No smooth-scroll hijacking or hydration-time viewport assumptions. Image records reserve dimensions and use Next Image lazy loading; no heavy 3D or scroll runtime is included. Test real devices and assistive technology before a public launch; passing automated checks is not a full accessibility audit.
 
-Automated checks verify generated route entrypoints, local navigation targets, metadata, one h1 per page, case study content, and honest contact/placeholder behavior. Browser visual, assistive technology, and real-device testing remain launch checks; no such audit is claimed.
+Future motion work: one scroll-driven workflow, selective text and image reveals, and capable-pointer cursor responses. Introduce GSAP only if that specific sequence requires it. Keep content accessible before and during animation, retain anchor behavior, and respect reduced motion.

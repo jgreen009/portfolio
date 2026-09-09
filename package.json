@@ -1,1 +1,26 @@
-{"name":"michael-portfolio","private":true,"type":"module","scripts":{"build":"node src/build.mjs","start":"node server.mjs","test":"node --test src/site.test.mjs"}}
+{
+  "name": "michael-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --port 5181",
+    "build": "next build",
+    "start": "node server.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test src/site.test.mjs"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "motion": "^13.2.0",
+    "next": "^16.3.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
