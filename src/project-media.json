@@ -1,0 +1,294 @@
+{
+  "aurelis-estate": {
+    "hero": {
+      "src": "/projects/aurelis-estate/properties.webp",
+      "alt": "Property listings and search filters",
+      "width": 1440,
+      "height": 1000,
+      "caption": "Property listings and search filters",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/aurelis-estate/properties.webp",
+        "alt": "Property listings and search filters",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Property listings and search filters",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/aurelis-estate/calculator.webp",
+        "alt": "Property financing calculator",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Property financing calculator",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/aurelis-estate/mobile.webp",
+        "alt": "Aurelis mobile homepage",
+        "width": 390,
+        "height": 844,
+        "caption": "Aurelis mobile homepage",
+        "kind": "mobile"
+      }
+    ]
+  },
+  "forge-fitness": {
+    "hero": {
+      "src": "/projects/forge-fitness/hero.webp",
+      "alt": "Forge Fitness training homepage",
+      "width": 1440,
+      "height": 800,
+      "caption": "Forge Fitness training homepage",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/forge-fitness/hero.webp",
+        "alt": "Forge Fitness training homepage",
+        "width": 1440,
+        "height": 800,
+        "caption": "Forge Fitness training homepage",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/forge-fitness/membership.webp",
+        "alt": "Three membership plans and comparison",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Three membership plans and comparison",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/forge-fitness/mobile.webp",
+        "alt": "Forge Fitness mobile membership presentation",
+        "width": 390,
+        "height": 844,
+        "caption": "Forge Fitness mobile membership presentation",
+        "kind": "mobile"
+      }
+    ]
+  },
+  "rise-hydration": {
+    "hero": {
+      "src": "/projects/rise-hydration/collection.webp",
+      "alt": "Four RISE flavor identities and product collection",
+      "width": 1440,
+      "height": 1000,
+      "caption": "Four RISE flavor identities and product collection",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/rise-hydration/collection.webp",
+        "alt": "Four RISE flavor identities and product collection",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Four RISE flavor identities and product collection",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/rise-hydration/mobile.webp",
+        "alt": "RISE collection on mobile",
+        "width": 390,
+        "height": 844,
+        "caption": "RISE collection on mobile",
+        "kind": "mobile"
+      }
+    ]
+  },
+  "key-tapper": {
+    "hero": {
+      "src": "/projects/key-tapper/hero.webp",
+      "alt": "Key Tapper guest lobby and difficulty selection",
+      "width": 1440,
+      "height": 900,
+      "caption": "Key Tapper guest lobby and difficulty selection",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/key-tapper/hero.webp",
+        "alt": "Key Tapper guest lobby and difficulty selection",
+        "width": 1440,
+        "height": 900,
+        "caption": "Key Tapper guest lobby and difficulty selection",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/key-tapper/gameplay.webp",
+        "alt": "Key Tapper active grid with a flashing square",
+        "width": 1440,
+        "height": 900,
+        "caption": "Key Tapper active grid with a flashing square",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/key-tapper/mobile.webp",
+        "alt": "Key Tapper mobile lobby",
+        "width": 390,
+        "height": 844,
+        "caption": "Key Tapper mobile lobby",
+        "kind": "mobile"
+      }
+    ]
+  },
+  "svip": {
+    "hero": {
+      "src": "/projects/svip/experience-zones.webp",
+      "alt": "SVIP experience zones and security center",
+      "width": 1440,
+      "height": 900,
+      "caption": "SVIP experience zones and security center",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/svip/experience-zones.webp",
+        "alt": "SVIP experience zones and security center",
+        "width": 1440,
+        "height": 900,
+        "caption": "SVIP experience zones and security center",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/svip/hero.webp",
+        "alt": "SVIP membership homepage",
+        "width": 1440,
+        "height": 900,
+        "caption": "SVIP membership homepage",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/svip/membership.webp",
+        "alt": "SVIP membership benefits",
+        "width": 1440,
+        "height": 923,
+        "caption": "SVIP membership benefits",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/svip/mobile.webp",
+        "alt": "SVIP mobile homepage",
+        "width": 390,
+        "height": 844,
+        "caption": "SVIP mobile homepage",
+        "kind": "mobile"
+      }
+    ]
+  },
+  "capy-custom-pc": {
+    "hero": {
+      "src": "/projects/capy-custom-pc/hero.webp",
+      "alt": "CapyCustomPC gaming PC homepage",
+      "width": 1440,
+      "height": 900,
+      "caption": "CapyCustomPC gaming PC homepage",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/capy-custom-pc/hero.webp",
+        "alt": "CapyCustomPC gaming PC homepage",
+        "width": 1440,
+        "height": 900,
+        "caption": "CapyCustomPC gaming PC homepage",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/capy-custom-pc/mobile.webp",
+        "alt": "CapyCustomPC mobile product presentation",
+        "width": 390,
+        "height": 844,
+        "caption": "CapyCustomPC mobile product presentation",
+        "kind": "mobile"
+      }
+    ]
+  },
+  "production-order-crm": {
+    "gallery": [
+      {
+        "src": "/projects/production-order-crm/public-sign-in.webp",
+        "alt": "Brand Fanatix public sign-in screen with empty email and password fields",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Public sign-in screen only. No company records or internal workflows are shown.",
+        "kind": "desktop"
+      }
+    ]
+  },
+  "northridge-build": {
+    "hero": {
+      "src": "/projects/northridge-build/hero.webp",
+      "alt": "Northridge Build Co. homepage and architectural hero",
+      "width": 1440,
+      "height": 1000,
+      "caption": "Northridge Build Co. homepage and architectural hero",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/northridge-build/hero.webp",
+        "alt": "Northridge Build Co. homepage and architectural hero",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Northridge Build Co. homepage and architectural hero",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/northridge-build/projects.webp",
+        "alt": "Concept construction project showcase",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Concept construction project showcase",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/northridge-build/estimator.webp",
+        "alt": "Illustrative construction cost estimator with project and finish controls",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Illustrative construction cost estimator with project and finish controls",
+        "kind": "desktop"
+      }
+    ]
+  },
+  "billora": {
+    "hero": {
+      "src": "/projects/billora/dashboard.webp",
+      "alt": "Dashboard with seeded demonstration balances and charts",
+      "width": 1440,
+      "height": 1000,
+      "caption": "Dashboard with seeded demonstration balances and charts. Demo data only.",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/billora/dashboard.webp",
+        "alt": "Dashboard with seeded demonstration balances and charts",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Dashboard with seeded demonstration balances and charts. Demo data only.",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/billora/invoices.webp",
+        "alt": "Invoice list showing seeded demonstration records",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Invoice list showing seeded demonstration records. Demo data only.",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/billora/editor.webp",
+        "alt": "Blank invoice editor with live document preview",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Blank invoice editor with live document preview. Demo data only.",
+        "kind": "desktop"
+      }
+    ]
+  }
+}

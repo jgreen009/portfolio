@@ -1,10 +1,41 @@
 'use client';
-import {useState,useRef} from 'react';
+import {useState,useRef,useEffect} from 'react';
 import {motion,useReducedMotion} from 'motion/react';
+import {motionTokens as t} from '@/lib/motion';
+import {PageEntrance} from './motion';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
-import {profile,services} from '@/lib/content';
-export function Navigation(){const [open,setOpen]=useState(false);const path=usePathname();const button=useRef<HTMLButtonElement>(null);return <header className="nav wrap" onKeyDown={e=>{if(e.key==='Escape'&&open){setOpen(false);button.current?.focus()}}}><Link className="brand" href="/" aria-label="Michael home">michael<span>®</span></Link><button ref={button} className="menu-toggle" aria-expanded={open} aria-controls="navigation" onClick={()=>setOpen(!open)}>{open?'Close −':'Menu +'}</button><nav id="navigation" className={open?'open':''} aria-label="Main navigation">{[['Work','/work'],['Services','/#services'],['About','/about'],['Contact','/contact']].map(([text,href])=><Link key={href} href={href} onClick={()=>setOpen(false)} aria-current={path===href||href==='/work'&&path.startsWith('/work/')?'page':undefined}>{text}</Link>)}</nav><Link href="/contact" className="nav-cta">Start a Project <span aria-hidden="true">↗</span></Link></header>}
-export function Entrance({children}:{children:React.ReactNode}){const reduced=useReducedMotion();return <motion.div initial={false} animate={{opacity:1,y:0}} transition={{duration:reduced?0:.4}} className="page-entrance">{children}</motion.div>}
-export function HoverLink({href,children,className=''}:{href:string;children:React.ReactNode;className?:string}){const reduced=useReducedMotion();return <motion.div whileHover={reduced?undefined:{y:-3}} transition={{duration:.2}}><Link href={href} className={className}>{children}</Link></motion.div>}
-export function Enquiry(){const [status,setStatus]=useState('');const [brief,setBrief]=useState('');return <form onSubmit={event=>{event.preventDefault();const data=new FormData(event.currentTarget);const text=`PROJECT BRIEF FOR MICHAEL\n\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nService: ${data.get('service')||'To be discussed'}\n\nProject\n${data.get('message')}`;setBrief(text);const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='michael-project-brief.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setStatus('Your brief is ready to save. Use the email link below to send it to Michael.');}}><label>Your name<input name="name" autoComplete="name" required placeholder="Your name" maxLength={120}/></label><label>Email address<input name="email" autoComplete="email" type="email" required placeholder="you@company.com" maxLength={254}/></label><label>What can I help with?<select name="service" defaultValue=""><option value="">Select a service</option>{services.map(([title])=><option key={title}>{title}</option>)}<option>Let’s figure it out</option></select></label><label>Tell me about your project<textarea name="message" rows={5} required maxLength={5000} placeholder="The challenge, the idea, and what success looks like…"/></label><button className="button primary" type="submit">Prepare project brief ↓</button><p className="form-note">Your brief downloads to your device. You choose when to send it. This form does not store or send your information.</p><p id="form-status" role="status">{status}</p>{brief&&<a className="text-link" href={`mailto:${profile.email}?subject=${encodeURIComponent('Project enquiry for Michael')}&body=${encodeURIComponent(brief)}`}>Open brief in email app ↗</a>}</form>}
+export function Navigation(){
+  const [open,setOpen]=useState(false);
+  const [raised,setRaised]=useState(false);
+  const path=usePathname();
+  const button=useRef<HTMLButtonElement>(null);
+  const header=useRef<HTMLElement>(null);
+  const previous=useRef(path);
+  useEffect(()=>{let wasRaised=false;const onScroll=()=>{const next=window.scrollY>24;if(next!==wasRaised){setRaised(next);wasRaised=next}};onScroll();window.addEventListener('scroll',onScroll,{passive:true});return()=>window.removeEventListener('scroll',onScroll)},[]);
+  useEffect(()=>{if(previous.current!==path){setOpen(false);previous.current=path}},[path]);
+  useEffect(()=>{const mq=matchMedia('(min-width: 761px)');const close=()=>{if(mq.matches)setOpen(false)};mq.addEventListener('change',close);return()=>mq.removeEventListener('change',close)},[]);
+  useEffect(()=>{
+    if(!open)return;
+    const oldOverflow=document.body.style.overflow;
+    document.body.style.overflow='hidden';
+    const targets=[document.querySelector('main'),document.querySelector('footer')].filter(Boolean) as HTMLElement[];
+    const previousInert=targets.map(el=>el.inert);targets.forEach(el=>el.inert=true);
+    const first=header.current?.querySelector<HTMLElement>('nav a');first?.focus();
+    return()=>{document.body.style.overflow=oldOverflow;targets.forEach((el,i)=>el.inert=previousInert[i])};
+  },[open]);
+  function closeMenu(){setOpen(false);button.current?.focus()}
+  return <header ref={header} className={`nav wrap ${raised?'is-raised':''} ${open?'menu-open':''}`} onKeyDown={e=>{
+    if(!open)return;
+    if(e.key==='Escape'){e.preventDefault();closeMenu()}
+    if(e.key==='Tab'){
+      const items=Array.from(header.current?.querySelectorAll<HTMLElement>('a,button')??[]).filter(el=>el.getClientRects().length);
+      const first=items[0],last=items[items.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+    }
+  }}><Link className="brand" href="/" aria-label="Michael home" onClick={()=>setOpen(false)}>michael<span>®</span></Link><button ref={button} className="menu-toggle" aria-expanded={open} aria-controls="navigation" aria-label={open?'Close −':'Menu +'} onClick={()=>open?closeMenu():setOpen(true)}><span>{open?'Close':'Menu'}</span><span className="menu-icon" aria-hidden="true"><i/><i/></span></button><nav id="navigation" className={open?'open':''} aria-label="Main navigation">{[['Work','/work'],['Services','/#services'],['About','/about'],['Contact','/contact']].map(([text,href])=><Link key={href} href={href} onClick={()=>setOpen(false)} aria-current={path.replace(/\/$/,'')===href||href==='/work'&&path.startsWith('/work/')?'page':undefined}>{text}</Link>)}</nav><Link href="/contact" className="nav-cta">Start a Project <span aria-hidden="true">↗</span></Link></header>
+}
+export function Entrance({children}:{children:React.ReactNode}){return <PageEntrance>{children}</PageEntrance>}
+export function HoverLink({href,children,className=''}:{href:string;children:React.ReactNode;className?:string}){const reduced=useReducedMotion();return <motion.div whileHover={reduced?undefined:{y:t.hover.lift}} transition={{duration:t.duration.fast}}><Link href={href} className={className}>{children}</Link></motion.div>}
+export {Enquiry} from './enquiry';

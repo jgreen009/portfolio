@@ -1,0 +1,32 @@
+{
+  "browser": "152.0.4191.66",
+  "playwright": {
+    "startTime": "2026-09-11T17:45:04.975Z",
+    "duration": 517004.71,
+    "expected": 51,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "automatedViewportWidths": [
+    360,
+    390,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "normalMotionSamples": 24,
+  "normalMotionErrors": [],
+  "unitTests": 8,
+  "otherEngines": "Firefox and WebKit not installed; installed Edge used as the Chromium-family browser.",
+  "clickScrollRerun": {
+    "startTime": "2026-09-11T17:54:09.892Z",
+    "duration": 47721.378,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "note": "51/52 full-run passes; corrected zero-width indicator test assertion, then both click/scroll tests passed. All 52 distinct scenarios have passing evidence on unchanged application source."
+}

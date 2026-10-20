@@ -1,0 +1,80 @@
+[
+  {
+    "name": "home-mobile",
+    "browser": "152.0.4191.66",
+    "recordedAt": "2026-09-11T17:55:03.002Z",
+    "viewport": "390\u00d7844",
+    "cpuSlowdown": 4,
+    "networkKbps": 1600,
+    "latencyMs": 150,
+    "LCP_ms": 2052,
+    "CLS": 3.96616257582852e-06,
+    "FCP_ms": 2052,
+    "blockingTimeObserved_ms": 195
+  },
+  {
+    "name": "home-desktop",
+    "browser": "152.0.4191.66",
+    "recordedAt": "2026-09-11T17:55:12.788Z",
+    "viewport": "1440\u00d7900",
+    "cpuSlowdown": 1,
+    "networkKbps": 10240,
+    "latencyMs": 40,
+    "LCP_ms": 636,
+    "CLS": 0,
+    "FCP_ms": 636,
+    "blockingTimeObserved_ms": 50
+  },
+  {
+    "name": "project-mobile",
+    "browser": "152.0.4191.66",
+    "recordedAt": "2026-09-11T17:55:30.810Z",
+    "viewport": "390\u00d7844",
+    "cpuSlowdown": 4,
+    "networkKbps": 1600,
+    "latencyMs": 150,
+    "LCP_ms": 1456,
+    "CLS": 0,
+    "FCP_ms": 1456,
+    "blockingTimeObserved_ms": 125
+  },
+  {
+    "name": "contact-mobile",
+    "browser": "152.0.4191.66",
+    "recordedAt": "2026-09-11T17:55:42.145Z",
+    "viewport": "390\u00d7844",
+    "cpuSlowdown": 4,
+    "networkKbps": 1600,
+    "latencyMs": 150,
+    "LCP_ms": 952,
+    "CLS": 0,
+    "FCP_ms": 952,
+    "blockingTimeObserved_ms": 195
+  },
+  {
+    "name": "about-mobile",
+    "browser": "152.0.4191.66",
+    "recordedAt": "2026-09-11T17:55:53.470Z",
+    "viewport": "390\u00d7844",
+    "cpuSlowdown": 4,
+    "networkKbps": 1600,
+    "latencyMs": 150,
+    "LCP_ms": 2812,
+    "CLS": 0,
+    "FCP_ms": 1296,
+    "blockingTimeObserved_ms": 189
+  },
+  {
+    "name": "visual-project-mobile",
+    "browser": "152.0.4191.66",
+    "recordedAt": "2026-09-11T17:56:04.857Z",
+    "viewport": "390\u00d7844",
+    "cpuSlowdown": 4,
+    "networkKbps": 1600,
+    "latencyMs": 150,
+    "LCP_ms": 2636,
+    "CLS": 0,
+    "FCP_ms": 1320,
+    "blockingTimeObserved_ms": 187
+  }
+]

@@ -1,0 +1,11 @@
+import {chromium} from '@playwright/test';import {writeFile} from 'node:fs/promises';
+const browser=await chromium.launch({channel:'msedge'});
+async function load(page,url){try{await page.goto(url,{waitUntil:'domcontentloaded',timeout:40000})}catch(error){if(page.url().startsWith('chrome-error'))throw error}await page.waitForFunction(()=>document.body.innerText.length>100,{},{timeout:30000});await page.waitForTimeout(1800)}
+async function capture(page,slug,name){await page.screenshot({path:`audit-results/project-captures/${slug}/${name}.png`,animations:'disabled',timeout:30000});console.log(`Captured ${slug}/${name}`)}
+try{
+ const game=await browser.newPage({viewport:{width:1440,height:900}});await load(game,'https://rhythm-flash-mastermind.lovable.app/');await game.getByRole('button',{name:'Sound Off',exact:true}).click();await capture(game,'key-tapper','hero');await game.getByRole('button',{name:'Start Game',exact:true}).click();await game.waitForTimeout(1000);console.log('GAME PLAY: '+(await game.locator('body').innerText()).slice(0,2600));await capture(game,'key-tapper','gameplay');await game.close();
+ const mobileGame=await browser.newPage({viewport:{width:390,height:844}});await load(mobileGame,'https://rhythm-flash-mastermind.lovable.app/');await mobileGame.getByRole('button',{name:'Sound Off',exact:true}).click();await capture(mobileGame,'key-tapper','mobile');await mobileGame.close();
+ for(const [slug,url,sections]of [['aurelis-estate','https://aurelis-estate.netlify.app/',['properties','calculator']],['forge-fitness','https://forgefitnesslanding.netlify.app/',['membership','schedule']],['rise-hydration','https://risehydration.netlify.app/',['story']]]){
+ const page=await browser.newPage({viewport:{width:1440,height:1000}});
+ try{await load(page,url);for(const id of sections){await page.evaluate(id=>{const el=document.getElementById(id);window.scrollTo({top:el.getBoundingClientRect().top+scrollY-100,behavior:'instant'})},id);await page.waitForTimeout(2200);await capture(page,slug,id==='story'?'collection':id)}await page.setViewportSize({width:390,height:844});await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));await page.waitForTimeout(1500);await capture(page,slug,'mobile');}catch(error){console.log(`${slug}: ${error.message.slice(0,200)}`)}finally{await page.close()}}
+}finally{await browser.close()}
