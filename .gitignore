@@ -13,3 +13,5 @@ audit-results/
 
 # Local Netlify folder
 .netlify
+
+.vercel

@@ -188,3 +188,32 @@ Added the tenth project at /work/billora/ using the supplied Invoicing CRM/repor
 Captured and visually reviewed three optimized WebP views in fresh isolated Edge contexts: dashboard, invoice list, and blank document editor. All displayed records are application-seeded demo data. No existing user profile, real records, or credentials were used. No forms or payments were submitted. Captions identify demo content; the case study explains browser-local storage and the absence of authentication, cloud sync, email delivery and payment processing. Generated a local share image. Source report remains unchanged.
 
 Billora validation: production build and all eight structural checks passed. The new page passed image decoding, overflow and axe accessibility checks at 390 and 1440 pixels. Its archive link was verified. Local preview remains available on port 5180; no public deployment was performed.
+
+## Billora live-link update — 30 October 2026
+
+Superseded: the initial URL substitution incorrectly treated a separate landing-page project as an application hosting change. Corrected below.
+
+
+## Billora landing-page correction — 30 October 2026
+
+Restored the Billora invoicing application URL to https://billora-invoicing.netlify.app/ and its Netlify tag. Added the separate Billora — Product Landing Page at /work/billora-landing/, linked to https://billora-beige.vercel.app/. Its design-focused entry describes the observed hero, workspace illustration, billing-flow storytelling, feature panels, document-style selector and FAQ. Captured and reviewed three WebP screenshots, with fictional product data labeled. The application screenshots, stack and reported implementation details remain attached to the original application record. No landing-page technology stack was inferred. Added concept status and a dedicated share image.
+
+Correction validation: final production build and all eight structural checks passed. Both live URLs were verified independently; both archive entries are present. The landing-page case study passed image decoding, overflow and axe accessibility checks at 390 and 1440 pixels. Local preview runs on port 5180.
+
+## Sora House — 30 October 2026
+
+Added Sora House as a separate hospitality website project at /work/sora-house/ with its live Vercel link. Case-study copy describes observed architectural presentation, room comparison and details, dining/coastal experiences, a filterable gallery, and stay planning. No client history, business results, tools, or development responsibilities were inferred. The availability note states that online reservations are not yet available and no payment is taken.
+
+Captured and visually reviewed six strategic WebP images: homepage hero, room selection, Atlantic Room detail, dining experiences, gallery filters, and mobile homepage. Images retain intrinsic dimensions, descriptive alt text and captions; the mobile capture uses the existing mobile-gallery layout. Generated a dedicated social preview. No public deployment was performed.
+
+Sora House validation: production build and all eight structural checks passed. Both 390px and 1440px browser checks verified six gallery figures, image decoding, the correct live URL, no horizontal overflow, and zero axe violations. Archive link confirmed. Local preview is running on port 5180.
+
+## VELUNE featured ecommerce case study — 6 November 2026
+
+Completed the paused addition using VELUNE_Portfolio_Project_Report_2026-11-06.docx supplied by the owner. VELUNE is first in homepage selected work and the work archive, with its own /work/velune/ route. Added confirmed Next.js/React/TypeScript, Supabase Auth, PostgreSQL/Drizzle, Stripe, React Hook Form/Zod, Tailwind and Vercel attribution. Responsibilities, architecture, design process and engineering considerations cover customer continuity, private data access, cart merging, stock reservations, order snapshots, webhook handling and fulfillment safeguards.
+
+Six reviewed public screenshots show the homepage, catalog, product detail, routine finder, empty sign-in form and mobile storefront. No customer account, staff interface, payment details or private records were accessed. A cart-capture attempt was stopped at the owner's pause request; no transaction was submitted. Existing retained screenshots are used rather than inventing connected-service evidence.
+
+The source report states Stripe is restricted to test mode, hosted authentication configuration remains unverified, and full-refund/commercial billing acceptance is unfinished. Case-study copy preserves those functional boundaries briefly while presenting the professional implementation. Database/catalog counts and verification outcomes are attributed to the supplied report, not represented as a new provider audit. The source Word document was read without modification; no additional media was generated with Higgsfield.
+
+VELUNE validation: final production build and all eight structural checks passed. Edge verified VELUNE first on both homepage selected work and the work archive. At 390 and 1440 pixels, six gallery images decoded, no horizontal overflow or page errors were observed, and axe reported zero violations. Evidence is recorded in audit-results/velune-checks.json. Local preview runs on port 5180. No customer authentication, financial transaction, provider mutation or public deployment was performed for this portfolio update.

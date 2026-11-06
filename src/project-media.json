@@ -290,5 +290,161 @@
         "kind": "desktop"
       }
     ]
+  },
+  "billora-landing": {
+    "hero": {
+      "src": "/projects/billora-landing/hero.webp",
+      "alt": "Billora landing-page hero with warm typography and product concept presentation",
+      "width": 1440,
+      "height": 1000,
+      "caption": "Billora landing-page hero with warm typography and product concept presentation. Product concept; fictional data.",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/billora-landing/hero.webp",
+        "alt": "Billora landing-page hero with warm typography and product concept presentation",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Billora landing-page hero with warm typography and product concept presentation. Product concept; fictional data.",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/billora-landing/features.webp",
+        "alt": "Billora marketing feature panels with fictional client and balance illustrations",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Billora marketing feature panels with fictional client and balance illustrations. Product concept; fictional data.",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/billora-landing/document-styles.webp",
+        "alt": "Billora selectable invoice-style showcase with a sample document",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Billora selectable invoice-style showcase with a sample document. Product concept; fictional data.",
+        "kind": "desktop"
+      }
+    ]
+  },
+  "sora-house": {
+    "hero": {
+      "src": "/projects/sora-house/hero.webp",
+      "alt": "Sora House — Architectural homepage with editorial typography and room-discovery calls to action",
+      "width": 1440,
+      "height": 1000,
+      "caption": "Architectural homepage with editorial typography and room-discovery calls to action",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/sora-house/hero.webp",
+        "alt": "Sora House — Architectural homepage with editorial typography and room-discovery calls to action",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Architectural homepage with editorial typography and room-discovery calls to action",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/sora-house/rooms.webp",
+        "alt": "Sora House — Room selection with coastal imagery, room details, and nightly pricing",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Room selection with coastal imagery, room details, and nightly pricing",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/sora-house/atlantic-room.webp",
+        "alt": "Sora House — Atlantic Room detail page with a large image composition and stay-planning link",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Atlantic Room detail page with a large image composition and stay-planning link",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/sora-house/experiences.webp",
+        "alt": "Sora House — Dining experience page combining interior photography and hospitality storytelling",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Dining experience page combining interior photography and hospitality storytelling",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/sora-house/gallery.webp",
+        "alt": "Sora House — Image gallery with architecture, rooms, coastal life, and dining filters",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Image gallery with architecture, rooms, coastal life, and dining filters",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/sora-house/mobile.webp",
+        "alt": "Sora House — Mobile homepage with compact navigation and responsive hero composition",
+        "width": 390,
+        "height": 844,
+        "caption": "Mobile homepage with compact navigation and responsive hero composition",
+        "kind": "mobile"
+      }
+    ]
+  },
+  "velune": {
+    "hero": {
+      "src": "/projects/velune/hero.webp",
+      "alt": "VELUNE — Editorial skincare storefront with product-led imagery",
+      "width": 1440,
+      "height": 1000,
+      "caption": "Editorial skincare storefront with product-led imagery",
+      "kind": "desktop"
+    },
+    "gallery": [
+      {
+        "src": "/projects/velune/hero.webp",
+        "alt": "VELUNE — Editorial skincare storefront with product-led imagery",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Editorial skincare storefront with product-led imagery",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/velune/shop.webp",
+        "alt": "VELUNE — Product catalog with skincare browsing and product cards",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Product catalog with skincare browsing and product cards",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/velune/product.webp",
+        "alt": "VELUNE — Soft Start product page with product information and purchasing controls",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Soft Start product page with product information and purchasing controls",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/velune/routine-finder.webp",
+        "alt": "VELUNE — Preference-led routine finder for personalized product discovery",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Preference-led routine finder for personalized product discovery",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/velune/sign-in.webp",
+        "alt": "VELUNE — Customer sign-in interface with empty fields",
+        "width": 1440,
+        "height": 1000,
+        "caption": "Customer sign-in interface with empty fields",
+        "kind": "desktop"
+      },
+      {
+        "src": "/projects/velune/mobile.webp",
+        "alt": "VELUNE — Mobile storefront with responsive navigation and product presentation",
+        "width": 390,
+        "height": 844,
+        "caption": "Mobile storefront with responsive navigation and product presentation",
+        "kind": "mobile"
+      }
+    ]
   }
 }

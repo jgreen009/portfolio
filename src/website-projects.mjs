@@ -93,5 +93,77 @@ export const websiteProjects = [
   ],
   "url": "https://billora-invoicing.netlify.app/",
   "note": "Browser-local application with localStorage persistence. Screenshots show seeded demo records from a fresh browser session, not real customer finances. No authentication, cloud sync, email delivery, or payment-processing integration is included. Recording a payment updates local records only."
+},
+{
+  "slug": "billora-landing",
+  "name": "Billora — Product Landing Page",
+  "short": "A little less admin. A clearer product story.",
+  "category": "Landing Page Design · Product Storytelling · Interactive Concept",
+  "description": "A standalone Billora landing-page concept using warm neutrals, editorial typography, and interactive product illustrations to explain a simpler billing experience.",
+  "problem": "The design needs to introduce a billing-product concept, communicate its core flow, and make document styles tangible before visitors explore the product.",
+  "outcome": "A cohesive marketing experience connects an illustrated workspace, a four-step billing story, feature panels, selectable document styles, FAQ disclosures, and clear exploration calls to action.",
+  "tech": [],
+  "features": [
+    "Editorial hero and illustrated workspace",
+    "Four-step quote-to-payment product story",
+    "Client and balance feature panels",
+    "Minimal, Modern, and Professional document styles",
+    "Six-currency formatting presentation",
+    "FAQ disclosures",
+    "Reduced-motion control",
+    "Product exploration calls to action"
+  ],
+  "url": "https://billora-beige.vercel.app/",
+  "storyMode": "design",
+  "note": "Standalone product landing-page concept, separate from the Billora invoicing application. All displayed workspace and document information is fictional demonstration content. The landing page collects no billing information and does not process payments."
+},
+{
+  "slug": "sora-house",
+  "name": "Sora House",
+  "short": "A considered digital welcome by the Atlantic.",
+  "category": "Hospitality · Hotel Website · Visual Design",
+  "description": "A multi-page hospitality website with architectural imagery, refined typography, and a calm coastal palette, connecting room discovery with experiences and stay planning.",
+  "problem": "The website needs to convey the atmosphere of a coastal stay while making room options, amenities, experiences, and practical information easy to explore.",
+  "outcome": "An image-led experience brings room comparisons, individual room pages, a filterable gallery, and a structured stay-planning interface into one coherent journey.",
+  "tech": [],
+  "features": [
+    "Architectural homepage and editorial storytelling",
+    "Room and suite comparison",
+    "Individual room pages with imagery and amenities",
+    "Dining and coastal experience pages",
+    "Filterable image gallery",
+    "Arrival, departure, and guest selection",
+    "Multi-step stay-planning interface",
+    "Responsive navigation and mobile layouts"
+  ],
+  "url": "https://sora-house-five.vercel.app/",
+  "storyMode": "design",
+  "note": "The stay-planning interface lets visitors review dates, rooms, and pricing. Online reservations are not yet available, and no payment is taken."
+},
+{
+  "slug": "velune",
+  "name": "VELUNE",
+  "short": "Everyday skincare. A complete shopping experience.",
+  "category": "Full-Stack Ecommerce · Customer Accounts · Store Operations",
+  "description": "A full-stack skincare ecommerce platform connecting a refined storefront with Supabase customer accounts, database-backed products and inventory, Stripe checkout integration, and permission-controlled store management.",
+  "problem": "The shopping experience needs to help customers discover suitable products, compare their options, build a routine, and move confidently from browsing to checkout.",
+  "outcome": "The implementation connects 36 products and 72 variants with customer accounts, persistent bags, inventory reservations, order snapshots, and fulfillment controls. The project report records connected-service checks across authentication, catalog, database, and management workflows, alongside Stripe sandbox verification.",
+  "tech": ["Next.js 16", "React 19", "TypeScript", "Supabase Auth", "PostgreSQL", "Drizzle ORM", "Stripe", "React Hook Form", "Zod", "Tailwind CSS", "Vercel"],
+  "features": [
+    "Full ecommerce storefront",
+    "Supabase authentication and customer accounts",
+    "Stripe Checkout integration in test mode",
+    "Product catalog and category collections",
+    "Product detail pages with usage information",
+    "Preference-led routine finder",
+    "Persistent guest and customer bags with transactional merging",
+    "Saved wishlists and routines",
+    "Product search, filtering, and sorting",
+    "Inventory reservations and immutable order snapshots",
+    "Permission-controlled catalog and fulfillment management",
+    "Responsive desktop and mobile shopping"
+  ],
+  "url": "https://velune-gray.vercel.app/",
+  "note": "Stripe checkout currently runs in test mode. Hosted sign-in requires final production configuration; live billing and full-refund acceptance remain pending."
 }
 ];
